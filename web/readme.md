@@ -13,3 +13,10 @@ useBus(this.env.bus, "ACTION_MANAGER:UI-UPDATED", ({ detail: mode }) => {
   }
 });
 ```
+
+## Change base layout
+
+```
+custom-addons/web/views/webclient_templates.xml
+ <link type="image/x-icon" rel="shortcut icon" t-att-href="x_icon or 'https://assets-global.website-files.com/64bda61fe4373e7e73cd9137/64d2a5910c63d14fe69fab1d_nordexl_icon.png'"/>
+```
