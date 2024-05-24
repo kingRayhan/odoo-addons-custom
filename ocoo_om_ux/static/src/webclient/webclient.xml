@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-inherit="web.WebClient" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-if='!state.fullscreen']" position="replace">
+            <t t-if="!state.fullscreen">
+                <div class="sash-container">
+                    <div class="monaco-sash vertical" t-on-contextmenu.prevent.stop="onSassLsideFold" t-on-mousedown.prevent.stop.capture="onSassLsideStartFold" t-att-class="{'sizing': state.sashSidenavMarkPoint}"/>
+                </div>
+                <aside class="o_sidenav">
+                    <div class="sidenav-header">
+                        <a class="navbar-brand m-0 text-uppercase" href="/web">
+                            <img class="navbar-brand-logo" src="/web/binary/company_logo" alt="Logo"/>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <hr class="horizontal dark mt-0"/>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h6 class="fs-7 fw-sbold ms-2 text-muted text-uppercase mb-0">Apps</h6>
+                            <button type="button" class="btn btn-om om-mask om-mask-blob text-muted p-1" t-on-click="openOmSearch">
+                                <i class="ri-st ri-search-line"/>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sidenav_content flex-column rolkit"/>
+                    <div role="button" class="nav-item mb-3 us-none" t-on-click="toggleFootnav" t-att-aria-expanded="ue.footnav">
+                        <hr class="horizontal dark mt-0"/>
+                        <div class="d-flex flex-row">
+                            <h6 class="fs-7 fw-sbold ms-2 text-muted text-uppercase mb-0 me-auto">Recents</h6>
+                            <span t-out="uo.recents.length" class="btn btn-sm border-secondary text-dodger fw-sbold lh-1" style="font-size: 10px;"/>
+                        </div>
+                    </div>
+                    <div t-ref="footnav" class="sidenav_footer flex-column rolkit scr3" t-att-class="{'d-none': ue.footnav}">
+                    </div>
+                </aside>
+                <NavBar/>
+            </t>
+        </xpath>
+    </t>
+</templates>

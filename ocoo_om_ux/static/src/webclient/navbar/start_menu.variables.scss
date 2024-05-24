@@ -1,0 +1,11 @@
+// == Udoo
+// ============================================================================
+$u-menu-background: #ffffff !default;
+$u-app-background: linear-gradient(315deg, #fbfbfb, #fbfbfb) !default;
+$u-app-shadow-o: 0 .3125rem .625rem 0 #e1e1e1 !default;
+$u-app-shadow-o-hover: 0px 7px 0.625rem 0 #e1e1e1 !default;
+
+$u-sidenav-width: 227px !default;
+$u-subnav-bf: 37px !default;
+$u-subnav-bg: $u-menu-background !default;
+$u-subnav-header: $o-gray-500 !default;

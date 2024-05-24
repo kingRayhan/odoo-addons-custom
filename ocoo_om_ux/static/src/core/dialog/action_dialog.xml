@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="web.Dialog.header" t-inherit-mode="extension">
+        <xpath expr="//t[@t-if='fullscreen']" position="after">
+            <span t-else="" class="me-2">
+                <button class="btn btn-sm btn-light rounded-0 ri-skip-up-line py-0 fs-3" tabindex="-1" data-tooltip="Align Top" t-on-click="align_top"/>
+                <button class="btn btn-sm btn-light rounded-0 ri-expand-left-right-line py-0 fs-3" data-tooltip="Expand" data-hotkey="m" tabindex="-1" t-on-click="toggle_dialog_size"/>
+            </span>
+        </xpath>
+    </t>
+
+    <t t-inherit="web.ActionDialog.header" t-inherit-mode="extension">
+        <xpath expr="//t[@t-if='fullscreen']" position="after">
+            <span t-else="" class="me-2">
+                <button class="btn btn-sm btn-light rounded-0 ri-skip-up-line py-0 fs-3" tabindex="-1" data-tooltip="Align Top" t-on-click="align_top"/>
+                <button class="btn btn-sm btn-light rounded-0 ri-expand-left-right-line py-0 fs-3" data-tooltip="Expand" data-hotkey="m" tabindex="-1" t-on-click="toggle_dialog_size"/>
+            </span>
+        </xpath>
+    </t>
+
+    <t t-inherit="web.SelectCreateDialog" t-inherit-mode="extension">
+        <xpath expr="//Dialog" position="attributes">
+            <attribute name="size">props.size</attribute>
+        </xpath>
+    </t>
+</templates>

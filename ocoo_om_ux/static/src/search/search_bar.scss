@@ -1,0 +1,33 @@
+.o_cp_searchview {
+    &:has(.dropdown-toggle) {
+        .o_searchview {
+            padding-inline-start: 0;
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+        }
+    }
+
+    flex-direction: row-reverse;
+
+    .o_searchview_dropdown_toggler {
+        margin-left: 1px;
+        background: $o-gray-100;
+        border: $input-border-width solid $o-gray-100 !important;
+        border-radius: 0 !important;
+        border-top-left-radius: $u-border-radius !important;
+        border-bottom-left-radius: $u-border-radius !important;
+    }
+
+    .o_searchview {
+        flex-direction: row-reverse;
+        background: $o-gray-100;
+        border: $input-border-width solid $o-gray-100 !important;
+        border-radius: $u-border-radius !important;
+        padding-inline-end: 0;
+
+        .o_searchview_input {
+            line-height: 1.6;
+        }
+    }
+
+}

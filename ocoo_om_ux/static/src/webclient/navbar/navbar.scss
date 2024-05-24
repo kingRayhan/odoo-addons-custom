@@ -1,0 +1,18 @@
+// = Main Navbar
+// ============================================================================
+.o_main_navbar {
+    .dropdown-item {
+        line-height: $u-lh;
+    }
+}
+
+.o_web_client.o_home_menu_background {
+    .o_menu_brand,
+    .o_navbar_apps_menu {
+        display: none !important;
+    }
+}
+
+a.o_menu_toggle:not(.o_menu_toggle_back) {
+    display: none !important;
+}

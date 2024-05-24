@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="layout" inherit_id="web.layout">
+        <xpath expr="//link[1]" position="after">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+        </xpath>
+    </template>
+
+    <template id="webclient_login" inherit_id="web.login_layout">
+        <xpath expr="//t[@t-call='web.frontend_layout']/t[last()]" position="after">
+            <t t-set="body_classname" t-value="'light-dm'"/>
+        </xpath>
+    </template>
+
+    <template id="webclient_bootstrap" inherit_id="web.webclient_bootstrap">
+        <xpath expr="//meta[@name='theme-color']" position="replace">
+            <meta name="theme-color" t-att-content="'#111827' if request.httprequest.cookies.get('color_scheme') == 'dark' else '#262626'"/>
+            <t t-set="color_shade" t-value="request.httprequest.cookies.get('color_shade')"/>
+        </xpath>
+        <xpath expr="//t[@t-call-assets='web.assets_web']" position="replace">
+            <t t-if="not color_shade">
+                <t t-call-assets="web.assets_web"/>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-call-assets='web.assets_web_dark']" position="replace">
+            <t t-if="not color_shade">
+                <t t-call-assets="web.assets_web_dark"/>
+            </t>
+        </xpath>
+    </template>
+</odoo>

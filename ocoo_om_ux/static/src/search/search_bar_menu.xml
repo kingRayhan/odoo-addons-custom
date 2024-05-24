@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-inherit="web.SearchBarMenu" t-inherit-mode="extension">
+        <xpath expr="//Dropdown" position="attributes">
+            <attribute name="position">'bottom-start'</attribute>
+        </xpath>
+        <xpath expr="//i[hasclass('fa-caret-down')]" position="attributes">
+            <attribute name="class">ri-lr ri-expand-up-down-line lh-1</attribute>
+        </xpath>
+    </t>
+
+</templates>

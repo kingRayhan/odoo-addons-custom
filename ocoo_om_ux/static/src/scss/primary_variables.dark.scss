@@ -1,0 +1,70 @@
+// = Colors
+// ============================================================================
+
+$o-white: #000 !default;
+$o-black: #FFF !default;
+
+$o-gray-900: #f1f5f9 !default;
+$o-gray-800: #e2e8f0 !default;
+$o-gray-700: #cbd5e1 !default;
+$o-gray-600: #94a3b8 !default;
+$o-gray-500: #64748b !default;
+$o-gray-400: #475569 !default;
+$o-gray-300: #334155 !default;
+$o-gray-200: #1e293b !default;
+$o-gray-100: #0f172a !default;
+
+$o-brand-odoo: #254856 !default;
+$o-brand-primary: #448692 !default;
+$o-enterprise-color: $o-gray-400 !default;
+$o-brand-secondary: $o-gray-700 !default;
+
+$o-success: #86df9b !default;
+$o-info: #8ac8d8 !default;
+$o-warning: #f9a95e !default;
+$o-danger: #f37a7a !default;
+
+$o-action: #84d9e4 !default;
+
+$light: $o-gray-300 !default;
+$dark: $o-gray-700 !default;
+
+// = Text
+// ============================================================================
+
+$o-main-text-color: $o-gray-800 !default;
+$o-main-link-color: #c29c90 !default;
+$o-main-favorite-color: #ffd532 !default;
+$o-main-code-color: #be6e82 !default;
+
+// = Fine-tune contextual text colors.
+$o-theme-text-colors: (
+    "primary": #7ed8d8,
+    "success": #7cca98,
+    "info": #56c4ba,
+    "warning": #FBB56A,
+    "danger": #f37a7a,
+    "dodger": #e6b75d,
+    ) !default;
+
+
+// = Badges
+$o-navbar-badge-color: #9cf7ce;
+
+// = Notebook
+$o-notebook-tab-active: #ffca75 !default;
+
+
+// == Udoo
+// ============================================================================
+
+// = Actions
+$u-action: #5a999b !default;
+$btn-om-bg-hover: $o-gray-100 !default;
+$u-menuitem-hover: shade-color($o-gray-900, 10%) !default;
+$u-menuitem-hover-bg: rgba($o-black, 0.08) !default;
+
+// = Segment
+$nav-segment-link: $o-gray-600 !default;
+$u-nav-segment-bg: $o-gray-100 !default;
+$u-nav-segment-shadow: 0 .1875rem .375rem 0 rgba(140, 164, 163, 0.17) !default;

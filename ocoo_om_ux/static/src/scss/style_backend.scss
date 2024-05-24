@@ -1,0 +1,417 @@
+// == General
+// ============================================================================
+
+.rolkit {
+    overflow-y: auto;
+}
+
+.rolkit,
+.o-dropdown--menu.dropdown-menu {
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    &.scr3::-webkit-scrollbar {
+        width: 3px;
+    }
+}
+
+hr.horizontal {
+    background-color: transparent;
+    width: 100%;
+}
+
+hr.horizontal.dark {
+    background-image: linear-gradient(90deg, transparent, rgba($o-black, .4), transparent);
+}
+
+.badge-ln {
+    line-height: 1;
+    align-self: flex-end;
+}
+
+* {
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #7d7d7d3d;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #b4b4b457;
+    }
+}
+
+// = Button
+.btn-om {
+    i {
+        pointer-events: none;
+    }
+
+    &:hover {
+        background-color: $btn-om-bg-hover;
+    }
+}
+
+// = Mask
+.om-mask {
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}
+
+.om-mask-blob {
+    -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cGF0aCBkPSJNMTAwIDBDMjAgMCAwIDIwIDAgMTAwczIwIDEwMCAxMDAgMTAwIDEwMC0yMCAxMDAtMTAwUzE4MCAwIDEwMCAwIi8+PC9zdmc+);
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cGF0aCBkPSJNMTAwIDBDMjAgMCAwIDIwIDAgMTAwczIwIDEwMCAxMDAgMTAwIDEwMC0yMCAxMDAtMTAwUzE4MCAwIDEwMCAwIi8+PC9zdmc+)
+}
+
+
+// == Sash Sizing: Chatter, Attachment Preview
+:root {
+    --u-sash-size: 17px;
+    --u-sash-mid-size: 16px;
+    --u-sash-hover-size: 3px;
+    --u-sidenav-gap: 3px;
+
+    // Dynamic sizing is equivalent to flex: 2 1 990px
+    // 
+    // @Inspired by https://github.com/microsoft/vscode
+    // @File /src/vs/base/browser/ui/sash/sash.ts:250
+    --Chatter-min-width: calc(#{$o-mail-Chatter-minWidth} + (100vw - #{$o-form-sheet-min-width} - var(--u-sidenav-width, #{$u-sidenav-width}) - #{$o-mail-Chatter-minWidth}) * (1 / 3));
+
+    .o_main_navbar {
+        z-index: 1000;
+        position: relative;
+    }
+
+    .o_web_client.noaside {
+        --Chatter-min-width: 14px;
+
+        .o_form_view .o_form_sheet_bg {
+            max-width: 100%;
+        }
+
+        .o-aside,
+        .o_attachment_preview {
+            display: none;
+        }
+    }
+
+    .o-mail-Form-chatter {
+        &.o-aside {
+            width: var(--Chatter-min-width);
+            flex-grow: 0;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    :root {
+        --u-sidenav-width: 200px;
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    :root {
+        --u-sidenav-width: 210px;
+    }
+}
+
+@include media-breakpoint-up(xxl, $o-extra-grid-breakpoints) {
+
+    .o_move_line_list_view .o_attachment_preview,
+    .o_attachment_preview {
+        width: var(--Chatter-min-width);
+        flex-grow: 0;
+    }
+}
+
+%-sash-container-base {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+
+    .monaco-sash {
+        z-index: 200;
+        position: absolute;
+        touch-action: none;
+        pointer-events: initial;
+    }
+
+    .monaco-sash.disabled {
+        pointer-events: none;
+    }
+
+    .monaco-sash:before {
+        content: '';
+        width: var(--u-sash-hover-size);
+        height: 100%;
+        background: transparent;
+        pointer-events: none;
+        position: absolute;
+        transition: background-color 0.2s ease-out;
+    }
+
+    .monaco-sash.vertical {
+        width: var(--u-sash-size);
+        height: 100%;
+        cursor: ew-resize;
+
+        &.sizing:before {
+            background-color: $o-notebook-tab-active;
+        }
+    }
+}
+
+.o_web_client>.sash-container {
+    @extend %-sash-container-base;
+
+    .monaco-sash.vertical {
+        left: calc(var(--u-sidenav-width, #{$u-sidenav-width}) - var(--u-sidenav-gap));
+    }
+}
+
+.o_content:has(.o-aside),
+.o_content:has(.o_attachment_preview) {
+
+    >.sash-container {
+        @extend %-sash-container-base;
+
+        .monaco-sash.vertical {
+            right: calc(var(--Chatter-min-width) - var(--u-sash-mid-size));
+            cursor: col-resize;
+        }
+
+        .monaco-sash.vertical.sizing {
+            --u-sash-size: 370px;
+            --u-sash-mid-size: 248px;
+
+            &:before {
+                margin-left: calc(var(--u-sash-mid-size) / 2 - var(--u-sash-hover-size));
+            }
+        }
+    }
+}
+
+// == Nav Segment
+.nav-segment {
+    position: relative;
+    padding: .25rem .25rem;
+    border-radius: $u-border-radius;
+    align-items: center;
+}
+
+.nav-segment:not(.nav-fill) {
+    display: -ms-inline-flexbox;
+    display: inline-flex
+}
+
+.nav-segment .nav-link {
+    color: $nav-segment-link;
+    font-size: .8125rem;
+    padding: 9px 10px 10px 10px;
+    border-radius: $u-border-radius;
+    line-height: 1;
+}
+
+.nav-segment .nav-link:hover {
+    color: $o-main-link-color;
+}
+
+.nav-segment .nav-link.active {
+    color: $o-gray-900;
+    background-color: $u-nav-segment-bg;
+    box-shadow: $u-nav-segment-shadow;
+}
+
+.nav-segment .nav-link.disabled {
+    color: #bdc5d1
+}
+
+.nav-segment.nav-pills {
+    border-radius: 50rem
+}
+
+.nav-segment.nav-pills .nav-link {
+    border-radius: 50rem
+}
+
+//
+
+.indicator-pill {
+    display: inline-flex;
+    align-items: center;
+    padding-inline: 6px;
+    height: 16px;
+    margin: auto 0;
+    margin-right: 6px;
+    border-radius: 6px;
+}
+
+.indicator-pill::before {
+    content: "";
+    height: 4px;
+    width: 4px;
+    border-radius: $u-border-radius;
+    background-color: rgba(complement($o-brand-primary), $o-opacity-disabled);
+}
+
+// == Text Status
+.btn-warning,
+.text-bg-warning {
+    color: $o-white !important;
+}
+
+// == Text Selection
+::selection {
+    background: $o-brand-primary;
+    color: white;
+}
+
+
+// == Navbar
+// ============================================================================
+
+.o_mobile_menu_toggle,
+.o_user_menu {
+    margin-left: 0.5rem !important;
+}
+
+
+// == Control Panel
+// ============================================================================
+
+.o_control_panel_main_buttons,
+.o_statusbar_buttons {
+
+    .btn-primary,
+    .btn-secondary {
+        text-transform: capitalize;
+        text-wrap: nowrap;
+    }
+}
+
+.o_control_panel {
+    padding-bottom: 10px !important;
+}
+
+ol.breadcrumb {
+    margin-bottom: 1px;
+}
+
+.o_breadcrumb {
+    margin-left: 4px;
+}
+
+.badge i {
+    font-size: 13px !important;
+}
+
+.o_cp_pager {
+
+    .o_pager_previous,
+    .o_pager_next {
+        line-height: $o-line-height-base;
+    }
+}
+
+
+// == List
+// ============================================================================
+
+td.o_data_cell {
+    vertical-align: middle;
+
+    >.o_field_text>span {
+        display: -webkit-box !important;
+        white-space: pre-wrap !important;
+        clip-path: stroke-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+}
+
+
+// == Kanban
+// ============================================================================
+
+.o_content>.o_kanban_renderer {
+
+    &.o_kanban_ungrouped {
+        .oe_kanban_card {
+            // Force bordering (issue with kanban list: survey)
+            border-top: $border-width solid $border-color !important;
+        }
+    }
+}
+
+
+// == Pivot
+// ============================================================================
+
+thead .o_pivot_measure_row {
+    font-weight: 600 !important;
+    color: $o-gray-600 !important;
+    padding-inline: 8px;
+}
+
+
+// == Calendar
+// ============================================================================
+
+.o_calendar_header {
+    text-transform: capitalize;
+}
+
+.fc-month-container {
+    h2 {
+        text-transform: capitalize;
+    }
+}
+
+
+// == Hierarchy
+// ============================================================================
+
+.o_hierarchy_node_header {
+    color: $o-white;
+}
+
+
+// == Modules
+// ============================================================================
+
+.o_menu_brand,
+.o_nav_entry,
+.o_menu_sections div button {
+    text-transform: capitalize;
+}
+
+
+// == Font Size
+.fs-7 {
+    font-size: 0.75rem !important;
+}
+
+.fw-sbold {
+    font-weight: 600;
+}
+
+// = Space
+.cg-32 {
+    column-gap: 32px;
+}
+
+.us-none {
+    user-select: none;
+}

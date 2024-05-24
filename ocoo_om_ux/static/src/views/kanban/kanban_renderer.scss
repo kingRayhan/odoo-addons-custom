@@ -1,0 +1,39 @@
+.o_kanban_renderer.o_kanban_grouped {
+
+    .o_kanban_record {
+        margin-top: 12px;
+
+        >div:not(.o_dropdown_kanban),
+        .o_kanban_quick_create {
+            border-radius: $u-border-radius;
+        }
+
+        >div::after {
+            top: calc(var(--KanbanRecord-padding-v) + 4px);
+            height: 36px;
+        }
+    }
+}
+
+.o_kanban_renderer.o_kanban_ungrouped {
+
+    .o_kanban_record {
+        border-radius: $u-border-radius;
+
+        >div:not(.o_dropdown_kanban),
+        .o_kanban_quick_create {
+            border-radius: $u-border-radius;
+        }
+
+        >div::after {
+            top: var(--KanbanRecord-padding-v);
+            left: -1px;
+            width: 3px;
+            height: 19%;
+        }
+    }
+
+    .o_kanban_record:has(.o_kanban_record_has_image_fill) {
+        --KanbanRecord-width: 327px;
+    }
+}

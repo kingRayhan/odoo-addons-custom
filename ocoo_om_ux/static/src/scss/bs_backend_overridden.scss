@@ -1,0 +1,17 @@
+$min-contrast-ratio: 3 !default;
+$spacer: 1rem !default;
+
+// == Buttons
+$btn-close-color: #0e2238 !default;
+$btn-close-bg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='#{$btn-close-color}' d='M14.3 12.179a.25.25 0 0 1 0-.354l9.263-9.262A1.5 1.5 0 0 0 21.439.442L12.177 9.7a.25.25 0 0 1-.354 0L2.561.442A1.5 1.5 0 0 0 .439 2.563L9.7 11.825a.25.25 0 0 1 0 .354L.439 21.442a1.5 1.5 0 0 0 2.122 2.121l9.262-9.263a.25.25 0 0 1 .354 0l9.262 9.263a1.5 1.5 0 0 0 2.122-2.121Z'/%3E%3C/svg%3E") !default;
+$btn-close-opacity: .7 !default;
+
+// == Dropdowns
+$dropdown-header-color: $o-gray-500 !default;
+$dropdown-link-hover-color: $u-menuitem-hover !default;
+$dropdown-link-hover-bg: $u-menuitem-hover-bg !default;
+
+//  == Modal
+$modal-content-border-width: 0 !default;
+$modal-footer-border-width: 1px !default;
+$modal-header-border-width: 1px !default;

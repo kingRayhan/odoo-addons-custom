@@ -1,0 +1,248 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ocoo_om_ux
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-08 07:19+0000\n"
+"PO-Revision-Date: 2024-04-08 07:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#, python-format
+msgid "All Apps"
+msgstr "すべてのアプリ"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#: code:addons/ocoo_om_ux/static/src/webclient/webclient.xml:0
+#, python-format
+msgid "Apps"
+msgstr "アプリ"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/bookmark.js:0
+#: code:addons/ocoo_om_ux/static/src/webclient/webclient.js:0
+#, python-format
+msgid "Bookmark manager"
+msgstr "ブックマークマネージャ"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/bookmark.js:0
+#, python-format
+msgid "Bookmark saved. Type CTRL+M to access it!"
+msgstr "ブックマーク保存済み。CTRL+Mでアクセス！"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/bookmark.js:0
+#: code:addons/ocoo_om_ux/static/src/webclient/webclient.js:0
+#, python-format
+msgid "Bookmark this tab"
+msgstr "このタブをブックマーク"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#, python-format
+msgid "Bookmarks"
+msgstr "ブックマーク"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/trays/quick_search.xml:0
+#, python-format
+msgid "Command Palette"
+msgstr "コマンドパレット"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/form_status/indicator.xml:0
+#, python-format
+msgid "Discard"
+msgstr "破棄"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/form_status/indicator.xml:0
+#, python-format
+msgid "Discard changes"
+msgstr "変更を破棄"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/user_menu.js:0
+#, python-format
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/webclient.xml:0
+#, python-format
+msgid "Logo"
+msgstr "ロゴ"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/user_menu.js:0
+#, python-format
+msgid "My Online Account"
+msgstr "オンラインアカウント"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/views/graph/graph_renderer.js:0
+#, python-format
+msgid "No data"
+msgstr "データなし"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/bookmark.js:0
+#, python-format
+msgid "Notification"
+msgstr "通知"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#, python-format
+msgid "Pin All to Start"
+msgstr "すべてのアプリをスタートにピン止め"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#, python-format
+msgid "Pin to Start"
+msgstr "スタートにピン止め"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#, python-format
+msgid "Pinned"
+msgstr "ピンされた"
+
+#. module: ocoo_om_ux
+#: model:ir.model.fields,field_description:ocoo_om_ux.field_res_users_settings__ps_data
+msgid "Ps Data"
+msgstr ""
+
+#. module: ocoo_om_ux
+#: model:ir.model.fields,field_description:ocoo_om_ux.field_res_users_settings__ps_fav_menus
+msgid "Ps Fav Menus"
+msgstr ""
+
+#. module: ocoo_om_ux
+#: model:ir.model.fields,field_description:ocoo_om_ux.field_res_users_settings__ps_menu_orders
+msgid "Ps Menu Orders"
+msgstr ""
+
+#. module: ocoo_om_ux
+#: model:ir.model.fields,field_description:ocoo_om_ux.field_res_users_settings__ps_start_xmlid
+msgid "Ps Start Xmlid"
+msgstr ""
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/webclient.xml:0
+#, python-format
+msgid "Recents"
+msgstr "最近の"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/search/control_panel.xml:0
+#: code:addons/ocoo_om_ux/static/src/search/control_panel.xml:0
+#, python-format
+msgid "Refresh"
+msgstr "リフレッシュ"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/form_status/indicator.xml:0
+#, python-format
+msgid "Save"
+msgstr "保存"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/form_status/indicator.xml:0
+#, python-format
+msgid "Save manually"
+msgstr "手動で保存"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#, python-format
+msgid "Select language"
+msgstr "言語を選択"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#, python-format
+msgid "Set as Home Action"
+msgstr "ホーム アクションを設定"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#, python-format
+msgid "Switch Scheme"
+msgstr "UIテーマの切替え"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/search/control_panel.js:0
+#, python-format
+msgid "There is unsaved data. Do you want to discard the changes and proceed?"
+msgstr "保存されていないデータがあります。変更を破棄して続行しますか？"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/bookmark.js:0
+#, python-format
+msgid "Undefined"
+msgstr "未定義"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#, python-format
+msgid "Unpin from Start"
+msgstr "スタートからピンを外す"
+
+#. module: ocoo_om_ux
+#: model:ir.model.fields,field_description:ocoo_om_ux.field_res_users_settings__up_bookmarks
+msgid "Up Bookmarks"
+msgstr ""
+
+#. module: ocoo_om_ux
+#: model:ir.model,name:ocoo_om_ux.model_res_users_settings
+msgid "User Settings"
+msgstr "ユーザ設定"
+
+#. module: ocoo_om_ux
+#. odoo-javascript
+#: code:addons/ocoo_om_ux/static/src/webclient/start_menu/navbar.xml:0
+#, python-format
+msgid "Workspace"
+msgstr "デスクトップ"
