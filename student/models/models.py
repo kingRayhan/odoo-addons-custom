@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
+from odoo import models
 
-# from odoo import models, fields, api
 
-
-# class custom-addons/student(models.Model):
-#     _name = 'custom-addons/student.custom-addons/student'
-#     _description = 'custom-addons/student.custom-addons/student'
+class student(models.Model):
+    _name = 'student.student'
+    _description = 'student.student'
 
 #     name = fields.Char()
 #     value = fields.Integer()

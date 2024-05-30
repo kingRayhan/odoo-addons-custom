@@ -125,8 +125,8 @@ function logOutItem(env) {
 
 registry
   .category("user_menuitems")
-  .add("documentation", documentationItem)
-  .add("support", supportItem)
+  // .add("documentation", documentationItem)
+  // .add("support", supportItem)
   .add("shortcuts", shortCutsItem)
   .add("separator", separator)
   .add("profile", preferencesItem)
